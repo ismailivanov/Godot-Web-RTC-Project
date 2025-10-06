@@ -41,7 +41,7 @@ var lobby_members : Dictionary
 var lobby_name : String = ""
 
 ## Signaling Server URL
-var server_url : String = "ws://143.110.147.145:9080"
+var server_url : String = "ws://127.0.0.1"
 
 
 func _ready() -> void:
