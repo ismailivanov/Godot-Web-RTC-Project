@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://drdtjhbi6th8u"
+path.s3tc="res://.godot/imported/character_v0_M_NPC_shorts4_D.png-38dbc4548a7978e640e225f5998d5afe.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "3a53925bfb54e57baa37bbc1ec24afdc"
+}
+
+[deps]
+
+source_file="res://Assets/character/v0/character_v0_M_NPC_shorts4_D.png"
+dest_files=["res://.godot/imported/character_v0_M_NPC_shorts4_D.png-38dbc4548a7978e640e225f5998d5afe.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

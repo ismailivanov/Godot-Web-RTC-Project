@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://f2dhealdvi4w"]
+
+[ext_resource type="PackedScene" uid="uid://co63ltnlnoidj" path="res://Assets/character/v0/character_v0.glb" id="1_u8ptm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v1ukd"]
+radius = 0.259827
+
+[node name="controller" type="Marker3D"]
+
+[node name="player" type="CharacterBody3D" parent="."]
+
+[node name="rig" parent="player" instance=ExtResource("1_u8ptm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="shape" type="CollisionShape3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_v1ukd")
+
+[node name="camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 4, 8)
+current = true

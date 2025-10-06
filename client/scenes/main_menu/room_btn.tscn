@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://brsehh4vpa3j8"]
+
+[ext_resource type="Script" uid="uid://lebbrmgedoxo" path="res://scenes/main_menu/room_btn.gd" id="1_qse6f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qse6f"]
+
+[node name="RoomBtn" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 65.57)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qse6f")
+script = ExtResource("1_qse6f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 35
+text = "asdadsasdasd"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinBtn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(83.91, 0)
+layout_mode = 2
+text = "Join"
+
+[connection signal="pressed" from="HBoxContainer/JoinBtn" to="." method="_on_join_btn_pressed"]

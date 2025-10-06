@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbjif701klyxr"]
+
+[ext_resource type="Texture2D" uid="uid://dkiym6v52dqwg" path="res://Assets/textures/court_grounds/test_court.png" id="1_38snk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af24n"]
+albedo_texture = ExtResource("1_38snk")
+uv1_scale = Vector3(0.05, 0.1, 0.025)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3t4o5"]
+material = SubResource("StandardMaterial3D_af24n")
+size = Vector3(16, 0.1, 32)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k2758"]
+points = PackedVector3Array(8, 0.05, 16, 8, -0.05, 16, 8, 0.05, -16, -8, 0.05, 16, -8, -0.05, 16, 8, -0.05, -16, -8, 0.05, -16, -8, -0.05, -16)
+
+[node name="world" type="Node3D"]
+
+[node name="test_field" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0492765, 0)
+mesh = SubResource("BoxMesh_3t4o5")
+
+[node name="body" type="StaticBody3D" parent="test_field"]
+
+[node name="shape" type="CollisionShape3D" parent="test_field/body"]
+shape = SubResource("ConvexPolygonShape3D_k2758")
+
+[node name="test_sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 3, 0)

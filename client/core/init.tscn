@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://i4axoibtlq1x"]
+
+[ext_resource type="Script" uid="uid://comdsfeeb4typ" path="res://scripts/_init.gd" id="1_ujcyo"]
+
+[node name="init" type="Node"]
+script = ExtResource("1_ujcyo")
+debug_mode = true

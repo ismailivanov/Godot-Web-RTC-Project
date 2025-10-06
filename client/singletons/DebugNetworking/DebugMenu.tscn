@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1wbox1gu2m2n"]
+
+[ext_resource type="Script" uid="uid://dvdll63beucai" path="res://singletons/DebugNetworking/debug_menu.gd" id="1_lq6pc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq6pc"]
+bg_color = Color(0.212305, 0.212305, 0.212305, 1)
+
+[node name="DebugMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_lq6pc")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 155
+layout_mode = 0
+offset_right = 302.0
+offset_bottom = 309.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lq6pc")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "CLIENT ID"
+
+[node name="PeerIDLine" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "123213"
+editable = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LobbyOwner" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "LOBBY OWNER "
+
+[node name="LobbyOwnerCheckBox" type="CheckBox" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LobbyOwner" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "LOBBY MEMBERS "
+
+[node name="LobbySize" type="SpinBox" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+editable = false
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LobbyOwner" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "LOBBY ID "
+
+[node name="LobbyId" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "123213"
+editable = false

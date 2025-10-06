@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5lia8obwe7dq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3afht"]
+bg_color = Color(0.230469, 0.226987, 0.189957, 1)
+
+[node name="PlayerNameLabel" type="Label"]
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_3afht")
+text = "Player Name"
+horizontal_alignment = 1
